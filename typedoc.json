@@ -1,0 +1,11 @@
+{
+  "entryPoints": ["src/"],
+  "githubPages": false,
+  "plugin": ["typedoc-plugin-markdown"],
+  "out": "docs/",
+  "entryDocument": "index.md",
+  "validation": {
+    "notDocumented": true
+  },
+  "requiredToBeDocumented": ["Enum", "Class", "Method", "Function"]
+}
