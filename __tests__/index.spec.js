@@ -24,7 +24,7 @@ describe('Lineage:', () => {
     let err;
 
     beforeEach(() => {
-      err = jest.spyOn(console, 'error').mockImplementation(() => {});
+      err = jest.spyOn(console, 'error').mockImplementation(() => true);
     });
 
     afterEach(() => {
@@ -32,7 +32,7 @@ describe('Lineage:', () => {
     });
 
     it('should throw an error if the first param is not a DOM node', () => {
-      const output = Lineage('foo');
+      Lineage('foo');
 
       expect(err).toBeCalledWith(new Error(`foo ${_C.ErrorNode}`));
     });
@@ -47,7 +47,7 @@ describe('Lineage:', () => {
       const node = document.getElementById('two');
       const sibling = document.createElement('p');
 
-      const output = Lineage(node, { root: sibling });
+      Lineage(node, { root: sibling });
 
       expect(err).toBeCalledWith(
         new Error(`${sibling} ${_C.ErrorParent} ${node}`)
@@ -70,7 +70,7 @@ describe('Lineage:', () => {
       const node = document.getElementById('two');
       const callback = jest.fn();
 
-      const output = Lineage(node, { callback });
+      Lineage(node, { callback });
 
       expect(callback).toHaveBeenCalledTimes(3);
     });

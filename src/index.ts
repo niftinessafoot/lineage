@@ -9,14 +9,16 @@
 
 type Node = ParentNode;
 interface Config {
-  callback: Function | never;
-  callbackData: unknown[];
-  root: Node;
+  callback?(): unknown;
+  callbackData?: unknown[];
+  root?: Node;
 }
 
 /**
  * @param ele - The starting DOM node
  * @param config - Optional configuration
+ *
+ * @returns Array of DOM nodes.
  */
 const Lineage = (ele: Node, config: Config): Node[] => {
   const map = [];
@@ -43,6 +45,7 @@ const Lineage = (ele: Node, config: Config): Node[] => {
     while (current.parentNode) {
       map.push(current);
       if (typeof callback === 'function') {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         //@ts-ignore
         callback.call(null, current, callbackData);
       }
