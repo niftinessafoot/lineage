@@ -1,6 +1,6 @@
 {
   "name": "@afoot/lineage",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Traverse up the DOM tree from a specified element.",
   "author": "Matthew Smith <code@niftinessafoot.com> (https://www.niftinessafoot.com)",
   "keywords": [
