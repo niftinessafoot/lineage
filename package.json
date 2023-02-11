@@ -1,6 +1,6 @@
 {
   "name": "@afoot/lineage",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Traverse up the DOM tree from a specified element.",
   "author": "Matthew Smith <code@niftinessafoot.com> (https://www.niftinessafoot.com)",
   "keywords": [
@@ -17,7 +17,7 @@
     "test": "jest",
     "test:coverage": "jest --coverage",
     "docs": "typedoc",
-    "prep:umd": "node ./scripts/init-umd-config.js"
+    "prep:umd": "node ./lib/init-umd-config.js"
   },
   "entry": "index.ts",
   "files": [
