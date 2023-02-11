@@ -5,7 +5,10 @@
   "author": "Matthew Smith <code@niftinessafoot.com> (https://www.niftinessafoot.com)",
   "keywords": [
     "module",
-    "typescript"
+    "typescript",
+    "javascript",
+    "dom",
+    "event handling"
   ],
   "scripts": {
     "prebuild": "npm run clean",
