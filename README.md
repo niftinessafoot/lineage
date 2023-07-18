@@ -1,5 +1,5 @@
 # lineage
-Traverse up the DOM tree to a specific parent or all the way up to `body`. Returns an array of DOM nodes. Especially useful for event handling and verifying `currentTaraget` elements are children of `target` parents.
+Traverse up the DOM tree to a specific parent or all the way up to `body`. Returns an array of DOM nodes. Especially useful for event handling and verifying `currentTarget` elements are children of `target` parents.
 
 ## usage
 ```js
